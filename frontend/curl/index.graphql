@@ -1,0 +1,3 @@
+schema @sdl(files: ["mediastackQuery/index.graphql"]) {
+  query: Query
+}

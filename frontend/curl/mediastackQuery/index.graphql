@@ -1,0 +1,27 @@
+type DataEntry {
+  author: String
+  category: String
+  country: String
+  description: String
+  image: String
+  language: String
+  published_at: DateTime
+  source: String
+  title: String
+  url: String
+}
+type Mediastack {
+  data: [DataEntry]
+  pagination: Pagination
+}
+type Pagination {
+  count: Int
+  limit: Int
+  offset: Int
+  total: Int
+}
+
+type Query {
+  mediastackQuery(access_key: String): Mediastack
+    @rest(endpoint: "http://api.mediastack.com/v1/news")
+}
