@@ -1,7 +1,5 @@
 # Laravel News App 
-
-
-_News Aggregation APP service built on Laravel for the backend and NextJ(React.Js) on the frontend
+_News Aggregation APP service built on Laravel for the backend and NextJs 13(React.Js) on the frontend
 
 ## Folder Structure
  * `frontend` - This Folder contains the frontend NextJs code
