@@ -45,6 +45,8 @@ class NewsApiResource implements NewsClient
 
                 // Clean the data and Post to DB
                 $articles = collect($responseData->articles);
+
+                // dd($articles);
                 $addNewsArticlesAction = new AddNewsArticlesAction();
                 $hasInserted = $addNewsArticlesAction($articles, $params);
 

@@ -6,6 +6,7 @@ use App\Models\NewsArticle;
 use App\Services\NewsApi\DTO\NewsApiData;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Log;
 
 class AddNewsArticlesAction
 {
@@ -21,7 +22,9 @@ class AddNewsArticlesAction
             return true;
 
         } catch (\Exception $e) {
-            return false;
+            Log::error('An Error Ocurred : '.$e->getMessage(), ['exception' => $e]);
+            throw new \Exception($e);
+            // return false;
         }
     }
 
